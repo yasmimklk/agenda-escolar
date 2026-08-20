@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Escolar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        🏫
+        <div>
+            <h1>Colégio Vida Nova</h1>
+            <p>Agenda de Eventos Escolar</p>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#inscricao">Inscrição</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<main>
+
+    <section id="inicio" class="hero">
+        <div>
+            <h2>Agenda de Eventos</h2>
+            <p>
+                Confira os principais eventos, atividades e projetos
+                do Colégio Vida Nova.
+            </p>
+            <a href="#eventos" class="botao">Ver eventos</a>
+        </div>
+
+        <aside class="proximo-evento">
+            <h3>⏳ Próximo evento</h3>
+            <p id="nomeProximo">Carregando...</p>
+            <div id="contador">--:--:--:--</div>
+        </aside>
+    </section>
+
+    <section id="eventos" class="eventos">
+        <h2>📅 Eventos da Escola</h2>
+
+        <div class="controles">
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="🔎 Pesquisar evento..."
+            >
+
+            <div class="filtros">
+                <button class="filtro ativo" data-categoria="Todos">
+                    Todos
+                </button>
+                <button class="filtro" data-categoria="Educação">
+                    Educação
+                </button>
+                <button class="filtro" data-categoria="Esportes">
+                    Esportes
+                </button>
+                <button class="filtro" data-categoria="Cultura">
+                    Cultura
+                </button>
+                <button class="filtro" data-categoria="Tecnologia">
+                    Tecnologia
+                </button>
+            </div>
+        </div>
+
+        <div id="listaEventos" class="cards"></div>
+
+        <div class="tabela-container">
+            <h2>📋 Calendário de Eventos</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Evento</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                        <th>Local</th>
+                        <th>Categoria</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelaEventos"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="inscricao" class="inscricao">
+        <h2>📝 Inscrição em Evento</h2>
+
+        <form id="formInscricao">
+
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" required>
+
+            <label for="turma">Turma</label>
+            <input type="text" id="turma" placeholder="Ex.: 2º A" required>
+
+            <label for="eventoEscolhido">Evento</label>
+            <select id="eventoEscolhido" required>
+                <option value="">Selecione um evento</option>
+            </select>
+
+            <button type="submit" class="botao">
+                Confirmar inscrição
+            </button>
+        </form>
+
+        <p id="mensagem"></p>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2>📞 Entre em contato</h2>
+
+        <div class="contato-grid">
+            <article>
+                <h3>📍 Endereço</h3>
+                <p>Rua da Educação, 100 - Centro</p>
+            </article>
+
+            <article>
+                <h3>📧 E-mail</h3>
+                <p>contato@vidanova.edu.br</p>
+            </article>
+
+            <article>
+                <h3>📱 Telefone</h3>
+                <p>(41) 99999-9999</p>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Colégio Vida Nova - Agenda de Eventos Escolar</p>
+    <p>Desenvolvido com HTML5, CSS3 e JavaScript</p>
+</footer>
+
+<div id="modal" class="modal">
+    <div class="modal-conteudo">
+        <button id="fecharModal" class="fechar">×</button>
+        <h2 id="modalTitulo"></h2>
+        <p id="modalDescricao"></p>
+        <p><strong>📅 Data:</strong> <span id="modalData"></span></p>
+        <p><strong>⏰ Horário:</strong> <span id="modalHorario"></span></p>
+        <p><strong>📍 Local:</strong> <span id="modalLocal"></span></p>
+        <p><strong>🏆 Categoria:</strong> <span id="modalCategoria"></span></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

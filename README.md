@@ -57,9 +57,9 @@ Deploy from a branch
 
 ## 👨‍🎓 Informações do aluno
 
-Nome: SEU NOME COMPLETO
+Nome: yasmim
 
-Turma: SUA TURMA
+Turma: 2j
 
 ## 📌 Objetivo
 
